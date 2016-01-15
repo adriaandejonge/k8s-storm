@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nimbus
+  labels:
+    app: nimbus
+spec:
+  containers:
+  - name: nimbus
+    image: adejonge/storm-nimbus
+    ports:
+    - containerPort: 6627

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: storm-ui
+  labels:
+    app: storm-ui
+spec:
+  containers:
+  - name: storm-ui
+    image: adejonge/storm-ui
+    ports:
+    - containerPort: 8080

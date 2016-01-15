@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: supervisor
+spec:
+  replicas: 3
+  selector:
+    app: supervisor
+  template:
+    metadata:
+      labels:
+        app: supervisor
+    spec:
+      containers:
+      - name: supervisor
+        image: adejonge/storm-supervisor
+        ports:
+        - name: sv0
+          hostPort: 6700
+          containerPort: 6700
+        - name: sv1
+          hostPort: 6701
+          containerPort: 6701
+        - name: sv2
+          hostPort: 6702
+          containerPort: 6702
+        - name: sv3
+          hostPort: 6703
+          containerPort: 6703
+  selector:
+    app: supervisor

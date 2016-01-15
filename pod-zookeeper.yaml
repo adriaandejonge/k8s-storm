@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zookeeper
+  labels:
+    app: zookeeper
+spec:
+  containers:
+  - name: zookeeper
+    image: adejonge/zookeeper
+    ports:
+    - containerPort: 2181
+    - containerPort: 2888
+    - containerPort: 3888
