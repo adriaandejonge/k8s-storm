@@ -4,13 +4,13 @@ metadata:
   name: zookeeper
 spec:
   ports:
-    - name: name1
+    - name: clients
       port: 2181
       targetPort: 2181
-    - name: name2
+    - name: peers
       port: 2888
       targetPort: 2888
-    - name: name3
+    - name: leader-election
       port: 3888
       targetPort: 3888
   selector:
