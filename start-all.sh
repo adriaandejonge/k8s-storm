@@ -9,4 +9,4 @@ kubectl create -f svc-storm-supervisor.yaml
 kubectl create -f rc-storm-supervisor.yaml
 kubectl create -f svc-storm-ui.yaml
 kubectl create -f pod-storm-ui.yaml
-#kubectl create -f pod-storm-examples.yaml
+kubectl create -f job-storm-examples.yaml
